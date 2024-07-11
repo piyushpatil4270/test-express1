@@ -8,8 +8,10 @@ const shopRouter=require("./routes/shop")
 const server=http.createServer(app)
 app.use(bodyParser({extended:true}))
 
-app.use(adminRouter)
-app.use(shopRouter)
+app.use("/admin",adminRouter)
+app.use((req,res,next)=>{
+    res.status(404).send("<h>Page not Found</h1>")
+})
 
 
 

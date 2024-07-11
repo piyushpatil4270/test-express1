@@ -8,7 +8,7 @@ router.get("/add-product",(req,res,next)=>{
 
 
 
-router.post("/product",(req,res,next)=>{
+router.post("/add-product",(req,res,next)=>{
     const name=req.body.name
     const size=req.body.size
     console.log(name)
