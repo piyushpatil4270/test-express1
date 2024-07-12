@@ -1,8 +1,7 @@
 const express=require("express")
 const router=express.Router()
+const shopController=require("../controllers/shop")
 
-router.use("/",(req,res,next)=>{
-    res.send("<h1>Hello from Express</h1>")
-})
+router.use("/",shopController.welCome)
 
 module.exports=router
